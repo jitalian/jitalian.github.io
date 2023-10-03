@@ -1,2 +1,2 @@
 # jitalian.github.io
-Resume Website
+This is Version 1 of my portfolio website.

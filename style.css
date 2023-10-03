@@ -4,32 +4,37 @@ html {
 }
 
 .wrapper {
+    border: 0px solid white;
     width: 80%;
     margin: 0 auto;
-    max-width: 62.5rem;
-    margin-top: 5rem;
-}
-
-h1, h2, p, section {
-    padding: 0;
-    margin: 0;
+    max-width: 90rem;
+    margin-top: 7.5rem;
 }
 
 a {
     text-decoration: none;
-    color: #b0b9c6;
+    color: #62FDE2;
 }
 
 a:visited{
     text-decoration: none;
-    color: #bfc6d1;
+    color: #62FDE2;
 }
 
 h1 {
-    font-size: 2.5rem;
+    padding: 0;
+    margin: 0;
+    font-size: 4rem;
+}
+h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
 }
 
 header p {
+    padding: 0;
+    margin: 0;
     margin-bottom: 1.5rem;
 }
 
@@ -43,11 +48,12 @@ header {
     display: flex;
     flex-flow: row wrap;
     border-bottom: 0px solid #b0b9c6;
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
+    gap: 5rem;
     
 }
 section {
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-flow: row wrap;
 }
@@ -59,8 +65,8 @@ section {
 }
 
 .rightheader {
-    margin-top: 1rem;
-    margin-left: 2rem;
+    font-size: 1.6rem;
+    padding-top: 1rem;
     text-align: justify;
     border: 0px solid white;
     flex: 1 0 49%;
@@ -68,12 +74,13 @@ section {
 
 img {
     border-radius: 2rem;
+    width: 32.5rem;
 }
 
 i.fa {
     background-color:#0F172A;
     color: #bfc6d1;
-    font-size: 3rem;
+    font-size: 5rem;
     margin: 0.2rem;
 
 }
@@ -93,22 +100,58 @@ ul {
     text-align: center;
 }
 
-li {
-    font-size: 1.25rem;
+ul a {
+    font-size: 2rem;
     background-color: #122B39;
     display: inline-block;
     padding: 0.3rem 1rem 0.3rem 1rem;
     border: 0px solid white;
-    margin-right: 0.75rem;
-    margin-left: 0.75rem;
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
     margin-top: 0.25rem;
     border-radius: 2rem;
 
 }
 
-li:hover {
+ul a:hover {
     background-color: #2C506A;
 }
 
+div.job {
+    border: 0px solid white;
+    margin-top: 2rem;
+    padding: 1rem;
+    color: #bfc6d1; 
+    background-color: #2a363d;
+    border-radius: 2rem;
+}
+.job ul {
+    font-size: 1.3rem;
+    list-style-type: square;
+    list-style-position: outside;
+    text-align: left;
+    padding: 1rem 0 0 3rem;
+    margin: 0;
+}
+
+div.job:hover {
+    background-color: #254D61;
+}
+
+.job li {
+    padding-left: 1rem;
+    padding-bottom: 0.75rem;
+}
+
+.blah li {
+    list-style-type: none;
+    text-align: center;
+    display: inline-block;
+    color: #62FDE2;
+    background-color: #122B39;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    text-align: center;
+}
 
 
