@@ -1,9 +1,21 @@
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateY(45deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateY(0);
+    }
+}
+
 html {
     background-color: #0F172A;
 
 }
 
 .wrapper {
+    animation: transitionIn 1.5s;
     border: 0px solid white;
     width: 80%;
     margin: 0 auto;
@@ -27,9 +39,14 @@ h1 {
     font-size: 4rem;
 }
 h2 {
-    padding: 0;
+    padding: 0 0 0.5rem 0;
     margin: 0;
     font-size: 2rem;
+}
+h3 {
+    padding:0;
+    margin: 0;
+    font-size: 1.3rem;
 }
 
 header p {
@@ -81,7 +98,7 @@ i.fa {
     background-color:#0F172A;
     color: #bfc6d1;
     font-size: 5rem;
-    margin: 0.2rem;
+    margin: 0.25rem;
 
 }
 
@@ -143,7 +160,7 @@ div.job:hover {
     padding-bottom: 0.75rem;
 }
 
-.blah li {
+.skills li {
     list-style-type: none;
     text-align: center;
     display: inline-block;
@@ -152,6 +169,15 @@ div.job:hover {
     padding: 0.5rem 1rem;
     border-radius: 2rem;
     text-align: center;
+}
+
+a.back {
+    font-size: 2rem;
+    color: #bfc6d1;
+}
+
+.back p:hover {
+    color: #7e8187;
 }
 
 
