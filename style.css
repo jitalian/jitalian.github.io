@@ -1,7 +1,7 @@
 @keyframes transitionIn {
     from {
         opacity: 0;
-        transform: rotateY(45deg);
+        transform: rotateY(90deg);
     }
     to {
         opacity: 1;
@@ -10,14 +10,17 @@
 }
 
 html {
-    background-color: #0F172A;
+    background-color: #172441;
+    
 
 }
 
 .wrapper {
-    animation: transitionIn 1.5s;
+    background-color: #0F172A;
+    padding: 4rem;
+    animation: transitionIn 2s;
     border: 0px solid white;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     max-width: 90rem;
     margin-top: 7.5rem;
@@ -36,12 +39,12 @@ a:visited{
 h1 {
     padding: 0;
     margin: 0;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 h2 {
     padding: 0 0 0.5rem 0;
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 h3 {
     padding:0;
@@ -76,6 +79,7 @@ section {
 }
 
 .leftheader { 
+    
     border: 0px solid white;
     text-align: center;
     flex: 1 0;
@@ -90,8 +94,9 @@ section {
 }
 
 img {
+    max-width: 100%;
+    /* min-width: 20rem; */
     border-radius: 2rem;
-    width: 32.5rem;
 }
 
 i.fa {
@@ -118,13 +123,13 @@ ul {
 }
 
 ul a {
-    font-size: 2rem;
+    font-size: 1.5rem;
     background-color: #122B39;
     display: inline-block;
     padding: 0.3rem 1rem 0.3rem 1rem;
     border: 0px solid white;
-    margin-right: 0.2rem;
-    margin-left: 0.2rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
     margin-top: 0.25rem;
     border-radius: 2rem;
 
