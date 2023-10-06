@@ -8,22 +8,37 @@
         transform: rotateY(0);
     }
 }
-
 html {
-    background-color: #172441;
-    
-
+    height: 100%;
+    background-color: #172441; 
+    overflow-y: scroll;
+    cursor: none;
 }
 
 .wrapper {
-    background-color: #0F172A;
-    padding: 4rem;
     animation: transitionIn 2s;
-    border: 0px solid white;
-    width: 70%;
+    max-width: 1300px;
     margin: 0 auto;
-    max-width: 90rem;
-    margin-top: 7.5rem;
+    margin-top: 10rem;
+    text-align: center;
+}
+
+body{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: #b0b9c6;
+    
+}
+
+.nav {
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0;
+    background-color: #0F172A;
+    
 }
 
 a {
@@ -40,11 +55,13 @@ h1 {
     padding: 0;
     margin: 0;
     font-size: 3rem;
+    color: white;
 }
-h2 {
+h2:not(.mylink) {
     padding: 0 0 0.5rem 0;
     margin: 0;
     font-size: 1.5rem;
+    color: white;
 }
 h3 {
     padding:0;
@@ -58,17 +75,10 @@ header p {
     margin-bottom: 1.5rem;
 }
 
-body{
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    color: #b0b9c6;
-    
-}
-
 header {
     display: flex;
     flex-flow: row wrap;
-    border-bottom: 0px solid #b0b9c6;
-    gap: 5rem;
+    gap: 2rem;
     
 }
 section {
@@ -76,27 +86,49 @@ section {
     margin: 0;
     display: flex;
     flex-flow: row wrap;
+    
 }
 
 .leftheader { 
-    
+    min-width: 400px;
+    background-color: #0F172A;
+    padding: 1rem;
+    border-radius: 2rem;
     border: 0px solid white;
     text-align: center;
     flex: 1 0;
+    
 }
 
 .rightheader {
-    font-size: 1.6rem;
-    padding-top: 1rem;
-    text-align: justify;
+    font-size: 1.3rem;
+    text-align: left;
+    padding-top: 3rem;
     border: 0px solid white;
-    flex: 1 0 49%;
+    flex: 1 0 50%;
+}
+.about {
+    background-color: #0F172A;
+    text-align: left;
+    padding: 1rem;
+    border-radius: 2rem;
+    margin-bottom: 3rem;
 }
 
 img {
     max-width: 100%;
-    /* min-width: 20rem; */
     border-radius: 2rem;
+}
+
+img.project {
+    max-width: 100%;
+    border-radius: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+img.project:hover {
+    transform: scale(1.1, 1.1);
 }
 
 i.fa {
@@ -107,57 +139,76 @@ i.fa {
 
 }
 
-i:hover {
-    color: #7e8187 ;
-}
-
 i:active, i:focus {
     background-color:#0F172A;
     color: #bfc6d1;
 }
 
+.nav li {
+    /* border: 1px solid red; */
+    font-size: 1.5rem;
+    background-color: #122B39;
+    display: inline-block;;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
+    margin-top: 0.25rem;
+    border-radius: 2rem;
+    /* transition: 0.2s; */
+}
+
+.cursor {
+    position: fixed;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: white;
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+.small {
+    width: 1rem;
+    height: 1rem;
+}
+
 ul {
-    padding: 2rem 0 0 0;
+    padding: 3rem 0 0 0;
     list-style-type: none;
     text-align: center;
 }
 
-ul a {
-    font-size: 1.5rem;
-    background-color: #122B39;
-    display: inline-block;
-    padding: 0.3rem 1rem 0.3rem 1rem;
-    border: 0px solid white;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
-    margin-top: 0.25rem;
-    border-radius: 2rem;
-
+.nav li:hover, .nav li a:hover, .fa:hover, .mylink h2:hover {
+    transform: scale(1.4, 1.4);
+    cursor: none;
 }
 
-ul a:hover {
-    background-color: #2C506A;
-}
-
-div.job {
-    border: 0px solid white;
+div.job, div.project, div.contact {
+    
+    max-width: 650px;
     margin-top: 2rem;
     padding: 1rem;
     color: #bfc6d1; 
-    background-color: #2a363d;
+    background-color: #0F172A;
     border-radius: 2rem;
+    display: inline-block;
+
 }
-.job ul {
-    font-size: 1.3rem;
+.job ul, .project ul {
+    font-size: 1rem;
     list-style-type: square;
     list-style-position: outside;
     text-align: left;
     padding: 1rem 0 0 3rem;
     margin: 0;
+
+    
 }
 
 div.job:hover {
-    background-color: #254D61;
+    background-color: #141f39;
 }
 
 .job li {
@@ -166,6 +217,7 @@ div.job:hover {
 }
 
 .skills li {
+    margin-bottom: 0.5rem;
     list-style-type: none;
     text-align: center;
     display: inline-block;
@@ -176,13 +228,57 @@ div.job:hover {
     text-align: center;
 }
 
-a.back {
-    font-size: 2rem;
-    color: #bfc6d1;
-}
-
 .back p:hover {
     color: #7e8187;
 }
+.mylink h2:hover {
+    color: #62FDE2;
+}
+
+.contact {
+    cursor: none;
+}
+
+fieldset {
+    border: 0; 
+}
+
+
+fieldset label, textarea, input {
+    cursor: none;
+    display: block;
+    text-align: left;
+	margin-bottom: 0.25rem;
+	width: 30rem;
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	border-radius: 0.25rem;
+	padding: 0.5rem;
+
+}
+
+textarea {
+    height: 15rem;
+}
+
+button {
+	margin: 2rem 0;
+	background-color: #122B39;
+	color: white;
+	border: none;
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+	border-radius: 10px;
+}
+
+button:hover {
+    transform: scale(1.4, 1.4);
+    cursor: none;
+}
+
+
+
+
+
 
 
