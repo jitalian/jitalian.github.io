@@ -56,7 +56,9 @@ h1 {
     margin: 0;
     font-size: 3rem;
     color: white;
+    
 }
+
 h2:not(.mylink) {
     padding: 0 0 0.5rem 0;
     margin: 0;
@@ -128,6 +130,7 @@ img.project {
 }
 
 img.project:hover {
+    cursor: none;
     transform: scale(1.1, 1.1);
 }
 
@@ -172,6 +175,14 @@ i:active, i:focus {
 .small {
     width: 1rem;
     height: 1rem;
+}
+
+@media (hover: none) {
+    .cursor {
+        width: 0;
+        height: 0;
+    }
+    
 }
 
 ul {
@@ -249,7 +260,7 @@ fieldset label, textarea, input {
     display: block;
     text-align: left;
 	margin-bottom: 0.25rem;
-	width: 30rem;
+    width: 25rem;
 	font-family: 'Roboto', Arial, Helvetica, sans-serif;
 	font-size: 1em;
 	border-radius: 0.25rem;
