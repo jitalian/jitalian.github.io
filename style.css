@@ -148,7 +148,6 @@ i:active, i:focus {
 }
 
 .nav li {
-    /* border: 1px solid red; */
     font-size: 1.5rem;
     background-color: #122B39;
     display: inline-block;;
@@ -157,7 +156,6 @@ i:active, i:focus {
     margin-left: 0.2rem;
     margin-top: 0.25rem;
     border-radius: 2rem;
-    /* transition: 0.2s; */
 }
 
 .cursor {
@@ -170,11 +168,6 @@ i:active, i:focus {
     transform: translate(-50%, -50%);
     pointer-events: none;
     mix-blend-mode: difference;
-}
-
-.small {
-    width: 1rem;
-    height: 1rem;
 }
 
 @media (hover: none) {
@@ -191,9 +184,13 @@ ul {
     text-align: center;
 }
 
-.nav li:hover, .nav li a:hover, .fa:hover, .mylink h2:hover {
+.nav li:hover, .nav li a:hover, .fa:hover, .mylink h2:hover, button:hover {
     transform: scale(1.4, 1.4);
     cursor: none;
+}
+
+fieldset input:hover, textarea:hover {
+    transform: scale(1.1);
 }
 
 div.job, div.project, div.contact {
@@ -270,6 +267,7 @@ fieldset label, textarea, input {
 
 textarea {
     height: 15rem;
+    margin-top: 10px;
 }
 
 button {
@@ -282,10 +280,7 @@ button {
 	border-radius: 10px;
 }
 
-button:hover {
-    transform: scale(1.4, 1.4);
-    cursor: none;
-}
+
 
 
 
