@@ -29,7 +29,7 @@ body{
     
 }
 
-.nav {
+nav ul {
     overflow-y: scroll;
     position: fixed;
     top: 0;
@@ -155,7 +155,7 @@ i:active, i:focus {
     color: #bfc6d1;
 }
 
-.nav li {
+nav li {
     font-size: 1.5rem;
     background-color: #122B39;
     display: inline-block;;
@@ -194,7 +194,7 @@ ul {
     text-align: center;
 }
 
-.nav li:hover, .nav li a:hover, .fa:hover, .mylink h2:hover, button:hover {
+nav li:hover, nav li a:hover, .fa:hover, .mylink h2:hover, button:hover {
     transform: scale(1.4, 1.4);
     cursor: none;
 }

@@ -23,13 +23,13 @@ zoomElements.forEach(element => {
 })
 
 const imageLinks = document.querySelectorAll('.image-link');
-cursorText = document.querySelector('.image-text');
+let cursorText = document.querySelector('.image-text');
 
 imageLinks.forEach(image => {
   image.addEventListener('mouseover', event => {
     cursor.style.mixBlendMode = 'normal'
     cursorText.innerText = "Click to Play!";
-    cursor.style.opacity = "85%"
+    cursor.style.opacity = "85%";
   });
 
   image.addEventListener('mouseout', event => {
@@ -37,5 +37,12 @@ imageLinks.forEach(image => {
     cursor.style.backgroundColor = "white";
     cursorText.innerText = "";
   });
+});
+
+window.addEventListener('mouseout', event => cursor.style.display = 'none')
+window.addEventListener('mouseover', event => {        
+  cursor.style.display = 'block';
+  cursor.style.left = event.clientX + 'px';
+  cursor.style.top = event.clientY + 'px';
 });
 
